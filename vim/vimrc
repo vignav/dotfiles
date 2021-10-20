@@ -176,7 +176,7 @@ call plug#begin('~/.vim/plugged')
     " For nand2tetris
     Plug 'sevko/vim-nand2tetris-syntax'
 
-    Plug '/usr/local/opt/fzf'
+    Plug 'junegunn/fzf'
     Plug 'junegunn/fzf.vim'
 
     " Colorschemes
