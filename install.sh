@@ -5,6 +5,7 @@ fi
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 BASE=$(pwd)
+
 #sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y
 
 if ! command -v fzf ; then
@@ -13,11 +14,6 @@ if ! command -v fzf ; then
 else
   echo "fzf found."
 fi
-
-cd
-BASE=$(dirname "${BASH_SOURCE[0]}")
-
-echo $BASE
 
 ln -sfv $BASE/.bashrc ~/.bashrc
 ln -sfv $BASE/vim ~/.vim
