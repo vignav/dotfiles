@@ -16,10 +16,15 @@ else
 fi
 
 ln -sfv $BASE/.bashrc ~/.bashrc
-ln -sfv $BASE/vim ~/.vim
+ln -sTfv $BASE/vim ~/.vim
 ln -sfv $BASE/.bash_aliases ~/.bash_aliases
 
 echo "Sourcing .bashrc"
 source ~/.bashrc
 
 vim +PlugInstall +qall
+WSL=$(uname -a | grep 'WSL')
+if [ -n WSL ] ; then
+  sudo echo -e "[network]\ngenerateResolvConf = false" > /etc/wsl.conf
+  sudo echo "nameserver 1.1.1.1" > /etc/resolv.conf
+fi
