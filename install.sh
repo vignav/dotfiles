@@ -24,7 +24,10 @@ source ~/.bashrc
 
 vim +PlugInstall +qall
 WSL=$(uname -a | grep 'WSL')
-if [ -n WSL ] ; then
+if [ -n "$WSL" ]; then
+  echo "This is WSL. Setting up DNS server as 1.1.1.1"
   sudo echo -e "[network]\ngenerateResolvConf = false" > /etc/wsl.conf
   sudo echo "nameserver 1.1.1.1" > /etc/resolv.conf
+else
+  echo "This is not WSL"
 fi
