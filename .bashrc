@@ -103,3 +103,11 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 source /usr/share/doc/fzf/examples/key-bindings.bash
 source /usr/share/doc/fzf/examples/completion.bash
+
+WSL=$(uname -a | grep 'WSL')
+if [ -n "$WSL" ]; then
+    export LIBGL_ALWAYS_INDIRECT=1
+    TEMP=$(arp|grep eth0|grep -Po '.*\..')
+    export DISPLAY=$TEMP":0.0"
+    #export DISPLAY=$("arp|grep eth0|grep -Po '.*\.. '"):0.0
+fi
