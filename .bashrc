@@ -107,7 +107,6 @@ source /usr/share/doc/fzf/examples/completion.bash
 WSL=$(uname -a | grep 'WSL')
 if [ -n "$WSL" ]; then
     export LIBGL_ALWAYS_INDIRECT=1
-    TEMP=$(arp|grep eth0|grep -Po '.*\..')
+    TEMP=$(ip route | grep 'default' | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b")
     export DISPLAY=$TEMP":0.0"
-    #export DISPLAY=$("arp|grep eth0|grep -Po '.*\.. '"):0.0
 fi
