@@ -107,6 +107,6 @@ source /usr/share/doc/fzf/examples/completion.bash
 WSL=$(uname -a | grep 'WSL')
 if [ -n "$WSL" ]; then
     export LIBGL_ALWAYS_INDIRECT=1
-    TEMP=$(ip route | grep 'default' | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b")
+    TEMP=$(ipconfig.exe | grep 'IPv4 Address' | grep '192.168.1.' | cut -d ":" -f 2 | cut -d " " -f 2 | tr -d '\r')
     export DISPLAY=$TEMP":0.0"
 fi
