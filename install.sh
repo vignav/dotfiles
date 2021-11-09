@@ -6,7 +6,8 @@ fi
 cd "$(dirname "${BASH_SOURCE[0]}")"
 BASE=$(pwd)
 
-#sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y
+sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 if ! command -v fzf ; then
   echo "fzf not found. Installing fzf now."
