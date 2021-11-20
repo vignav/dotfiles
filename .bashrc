@@ -202,7 +202,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 source /usr/share/doc/fzf/examples/key-bindings.bash
-source /usr/share/doc/fzf/examples/completion.bash
+#source /usr/share/doc/fzf/examples/completion.bash
 
 WSL=$(uname -a | grep 'WSL')
 if [ -n "$WSL" ]; then
