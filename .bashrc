@@ -209,4 +209,5 @@ if [ -n "$WSL" ]; then
     export LIBGL_ALWAYS_INDIRECT=1
     TEMP=$(ipconfig.exe | grep 'IPv4 Address' | grep '192.168.1.' | cut -d ":" -f 2 | cut -d " " -f 2 | tr -d '\r')
     export DISPLAY=$TEMP":0.0"
+    export PULSE_SERVER="tcp:$TEMP"
 fi

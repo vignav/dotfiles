@@ -31,4 +31,5 @@ if [ -n "$WSL" ]; then
   sudo echo "nameserver 1.1.1.1" > /etc/resolv.conf
 else
   echo "This is not WSL"
+  sudo apt install locales-all
 fi
