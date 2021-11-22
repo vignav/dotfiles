@@ -1,4 +1,4 @@
-# dotfiles
+# .dotfiles
 My .bashrc and vim config files.
 
 Installs Oh My Bash.
