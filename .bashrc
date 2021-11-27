@@ -18,3 +18,6 @@ fi
 source /usr/share/doc/fzf/examples/key-bindings.bash
 #source /usr/share/doc/fzf/examples/completion.bash
 
+if [ -f ~/.bash_wsl ]; then
+    source ~/.bash_wsl
+fi

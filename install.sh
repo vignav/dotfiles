@@ -16,7 +16,6 @@ WSL=$(uname -a | grep 'WSL')
 if [ -n "$WSL" ]; then
   sudo bash -c "echo -e '[network]\ngenerateResolvConf = false' > /etc/wsl.conf ; echo 'nameserver 1.1.1.1' > /etc/resolv.conf"
   ln -sfv $BASE/.bash_wsl ~/.bash_wsl
-  echo "source ~/.bash_wsl" >> .bashrc
 fi
 
 #if it is debian
