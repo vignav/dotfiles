@@ -137,6 +137,9 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+" NerdTree tab switching
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
 
 "------------------------------------------------------------
 "------------------------------------------------------------
