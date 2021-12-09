@@ -56,6 +56,10 @@ set hlsearch
 " Use case insensitive search, except when using capital letters
 set ignorecase
 set smartcase
+command Q q
+command Wq wq
+command WQ wq
+command W w
 
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
@@ -154,9 +158,9 @@ set noshowmode
 
 " ALE
 let g:ale_completion_enabled = 1
-"let g:ale_linters = {
-"\  'cpp': ['ccls']
-"\}
+let g:ale_linters = {
+\  'cpp': ['ccls'],
+\}
 let g:ale_fixers = {
 \  'javascript': ['eslint', 'prettier'],
 \  'typescript': ['eslint', 'prettier'],
