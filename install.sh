@@ -4,12 +4,8 @@ BASE=$(pwd)
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
-ln -sfv $BASE/.bashrc ~/.bashrc
 ln -sTfv $BASE/vim ~/.vim
-ln -sfv $BASE/.bash_aliases ~/.bash_aliases
-ln -sfv $BASE/.bashrc_ohmybash ~/.bashrc_ohmybash
-
-vim +PlugInstall +qall
+ln -sfv $BASE/.my_bashrc.sh ~/.oh_my_bash/custom/.my_bashrc.sh
 
 #if it is wsl
 WSL=$(uname -a | grep 'WSL')
@@ -20,12 +16,10 @@ fi
 
 #if it is debian
 if [  -f /etc/debian_version ]  ; then
-  if ! command -v fzf ; then
-    sudo apt install fzf -y
-  fi
+  sudo apt install fzf -y
+  sudo apt install vim -y
   sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y
   sudo apt install locales-all
 fi
 
-echo "Sourcing .bashrc"
-source ~/.bashrc
+vim +PlugInstall +qall
