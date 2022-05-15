@@ -1,4 +1,5 @@
+#!/bin/bash
 export LIBGL_ALWAYS_INDIRECT=1
-TEMP=$(ipconfig.exe | grep 'IPv4 Address' | grep '192.168.1.' | cut -d ":" -f 2 | cut -d " " -f 2 | tr -d '\r')
+TEMP=$(ip route | grep default | grep -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' -o)
 export DISPLAY=$TEMP":0.0"
 export PULSE_SERVER="tcp:$TEMP"
