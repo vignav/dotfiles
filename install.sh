@@ -5,7 +5,7 @@ BASE=$(pwd)
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 ln -sTfv $BASE/vim ~/.vim
-ln -sfv $BASE/.my_bashrc.sh ~/.oh_my_bash/custom/.my_bashrc.sh
+ln -sfv $BASE/my_bashrc.sh ~/.oh-my-bash/custom/my_bashrc.sh
 
 #if it is wsl
 WSL=$(uname -a | grep 'WSL')
