@@ -16,3 +16,4 @@ if [ -f /etc/debian_version ]; then
 fi
 
 alias sshpi='ssh pi@raspberrypi.local'
+export EDITOR='vim'
