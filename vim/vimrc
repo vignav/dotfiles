@@ -179,6 +179,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-surround'
     Plug 'jiangmiao/auto-pairs'
     Plug 'sheerun/vim-polyglot'
+    Plug 'https://github.com/vim-scripts/loremipsum'
 
     " For nand2tetris
     Plug 'sevko/vim-nand2tetris-syntax'
