@@ -1,5 +1,0 @@
-#!/bin/bash
-export LIBGL_ALWAYS_INDIRECT=1
-TEMP=$(ip route | grep default | grep -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' -o)
-export DISPLAY=$TEMP":0.0"
-export PULSE_SERVER="tcp:$TEMP"

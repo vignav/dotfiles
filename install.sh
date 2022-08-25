@@ -2,6 +2,8 @@
 cd "$(dirname "${BASH_SOURCE[0]}")"
 BASE=$(pwd)
 
+git config --global core.editor vim
+
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 ln -sTfv $BASE/vim ~/.vim
@@ -11,7 +13,6 @@ ln -sfv $BASE/my_bashrc.sh ~/.oh-my-bash/custom/my_bashrc.sh
 WSL=$(uname -a | grep 'WSL')
 if [ -n "$WSL" ]; then
   sudo bash -c "echo -e '[network]\ngenerateResolvConf = false' > /etc/wsl.conf ; echo 'nameserver 1.1.1.1' > /etc/resolv.conf"
-  ln -sfv $BASE/.bash_wsl ~/.bash_wsl
 fi
 
 #if it is debian
