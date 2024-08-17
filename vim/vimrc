@@ -175,17 +175,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdcommenter'
     Plug 'itchyny/lightline.vim'
     Plug 'dense-analysis/ale'
-    "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'tpope/vim-surround'
     Plug 'jiangmiao/auto-pairs'
     Plug 'sheerun/vim-polyglot'
-    Plug 'https://github.com/vim-scripts/loremipsum'
-
-    " For nand2tetris
-    Plug 'sevko/vim-nand2tetris-syntax'
-
-    Plug 'junegunn/fzf'
-    Plug 'junegunn/fzf.vim'
 
     " Colorschemes
     Plug 'tomasr/molokai'
