@@ -99,3 +99,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+#Alias for MAC 
+alias copy="pbcopy"
+alias paste="pbpaste"
+alias ls="ls -x1 --color" 
