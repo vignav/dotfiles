@@ -73,6 +73,7 @@ ENABLE_CORRECTION="true"
 plugins=(git web-search zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+source <(fzf --zsh)
 
 # User configuration
 

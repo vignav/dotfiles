@@ -13,6 +13,8 @@ if [ "$(uname)" == "Darwin" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 	fi
 
+	brew install fzf
+
 	if [ -z $(which wget) ]; then
 		brew install wget
 	fi
@@ -20,7 +22,7 @@ if [ "$(uname)" == "Darwin" ]; then
 	ln -shF $BASE/vim ~/.vim
 
 	# ZSH installation and config
-	if [ -z $ZSH] ]; then
+	if [ -z $ZSH ]; then
 		sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 		ln -shF $BASE/common.zsh-theme $ZSH/custom/themes
 		ln -shF $BASE/.zshrc ~/ 
